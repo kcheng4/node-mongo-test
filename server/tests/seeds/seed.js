@@ -12,7 +12,7 @@ const users = [{
   password: 'Meetch',
   tokens:[{
     access:'auth',
-    token:jwt.sign({_id:user1ID,access:'auth'},'secret').toString()
+    token:jwt.sign({_id:user1ID,access:'auth'},process.env.JWT_SECRET).toString()
   }];
 },{
   _id: user2ID,
